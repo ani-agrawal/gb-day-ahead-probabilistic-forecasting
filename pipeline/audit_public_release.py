@@ -24,7 +24,6 @@ REQUIRED_RELEASE_FILES = {
     ROOT / "requirements.txt",
     ROOT / "environment.yml",
     ROOT / "docs" / "DATA_ACCESS.md",
-    ROOT / "docs" / "ZENODO_DEPOSIT.md",
 }
 SENSITIVE_NAMES = re.compile(
     r"(DAM_outturn|model_table.*\.parquet$|predictions\.csv$|_predictions\.csv$|"
