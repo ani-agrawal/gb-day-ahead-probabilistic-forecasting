@@ -13,6 +13,9 @@ abstract: >-
   Encoder-Decoder LSTM, conformal calibration, multi-window LEAR-QRA, and
   two- and three-model Quantile Regression Averaging combinations.
 version: "1.0.0"
+doi: "10.5281/zenodo.22836687"
+date-released: "2026-09-18"
+repository-code: "https://github.com/ani-agrawal/gb-day-ahead-probabilistic-forecasting"
 license: MIT
 keywords:
   - probabilistic forecasting

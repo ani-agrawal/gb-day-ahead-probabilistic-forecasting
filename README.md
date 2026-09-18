@@ -23,5 +23,4 @@ The model sequence is documented in [Code map](docs/CODE_MAP.md).
 ## Citation and licence
 
 This software is released under the MIT licence. Citation metadata are provided
-in `CITATION.cff`. A versioned Zenodo archive will be linked here after the
-`v1.0.0` release.
+in `CITATION.cff`.
