@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the archived software release."
+title: "Probabilistic day-ahead electricity-price forecasting in Great Britain: modelling and evaluation code"
+type: software
+authors:
+  - family-names: Agrawal
+    given-names: Anirudh
+    affiliation: "UCL Energy Institute, University College London"
+abstract: >-
+  Modelling and evaluation code for probabilistic forecasts of hourly EPEX
+  SPOT Great Britain day-ahead electricity prices. The release implements the
+  historical and linear benchmarks, quantile regression forest,
+  Encoder-Decoder LSTM, conformal calibration, multi-window LEAR-QRA, and
+  two- and three-model Quantile Regression Averaging combinations.
+version: "1.0.0"
+license: MIT
+keywords:
+  - probabilistic forecasting
+  - electricity price forecasting
+  - quantile regression averaging
+  - conformal prediction
+  - day-ahead electricity market
+  - machine learning

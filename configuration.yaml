@@ -1,0 +1,64 @@
+project:
+  name: "Probabilistic day-ahead electricity-price forecasting in Great Britain"
+  release_scope: "paper modelling and evaluation code"
+  timezone: "Europe/London"
+
+data:
+  model_table: "04_data/processed/model_table_hourly_epex.parquet"
+  licensed_target: "04_data/raw/licensed_epex/DAM_outturn_combined.parquet"
+  target_column: "price"
+  first_delivery_day: "2023-01-01"
+  primary_evaluation_start: "2025-01-01"
+  primary_evaluation_end: "2025-12-31"
+  forecast_gate: "09:20 on D-1"
+  newest_common_training_target: "D-2"
+
+quantiles: [0.05, 0.10, 0.20, 0.30, 0.40, 0.50, 0.60, 0.70, 0.80, 0.90, 0.95]
+
+tabular:
+  training_window_days: 364
+  refit_days: 7
+  linear_alpha: 0.01
+  qrf_trees: 500
+  qrf_min_samples_leaf: 5
+  qrf_max_features: 0.5
+  qrf_random_state: 42
+
+lstm:
+  architecture: "Encoder-Decoder LSTM"
+  training_window_days: 728
+  refit_days: 7
+  units: 64
+  dropout: 0.1
+  batch_size: 16
+  early_stopping_holdout_days: 14
+  early_stopping_patience: 10
+  maximum_epochs: 200
+  learning_rate: 0.001
+  seeds: [42, 7, 101]
+  principal_quantiles: [0.05, 0.10, 0.50, 0.90, 0.95]
+  interior_quantiles: [0.20, 0.30, 0.40, 0.60, 0.70, 0.80]
+
+conformal:
+  method: "asymmetric conformalised quantile regression"
+  candidate_windows_days: [30, 60, 90]
+  selected_window_days: 60
+  information_lag_days: 2
+
+lear_qra:
+  estimator: "epftoolbox-equivalent LassoLarsIC(AIC) then Lasso refit"
+  features: 247
+  refit_days: 7
+  candidate_windows_days: [273, 364, 546, 728]
+  principal_windows_days: [364, 546, 728]
+  sensitivity_window_days: 273
+
+qra:
+  development_start: "2024-07-01"
+  development_end: "2024-12-31"
+  evaluation_start: "2025-01-01"
+  evaluation_end: "2025-12-31"
+  update_days: 7
+  information_lag_days: 2
+  principal: "quantile-level combination of LSTM, QRF and LEAR-QRA forecasts"
+  comparison: "L1-regularised QRA with penalty selected on development data"

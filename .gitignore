@@ -1,0 +1,41 @@
+# Operating-system and editor files
+.DS_Store
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Python/Jupyter caches and local environments
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.cache/
+.venv*/
+venv/
+env/
+
+# Logs and generated artefacts
+logs/
+dist/
+06_outputs/**
+!06_outputs/.gitkeep
+modelling/logs/**
+modelling/outputs/**
+modelling/**/outputs/**
+
+# Data are deliberately absent from the public repository. In particular,
+# the EPEX target and forecast files containing actual prices are licensed.
+04_data/raw/**
+04_data/processed/**
+!04_data/raw/README.md
+!04_data/processed/README.md
+modelling/input_snapshot/**
+!modelling/input_snapshot/README.md
+
+# Model artefacts and prediction files can contain licensed target values.
+*.keras
+*.h5
+*.pkl
+*.joblib
+**/predictions.csv
+**/*_predictions.csv
