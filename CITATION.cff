@@ -11,10 +11,13 @@ abstract: >-
   SPOT Great Britain day-ahead electricity prices. The release implements the
   historical and linear benchmarks, quantile regression forest,
   Encoder-Decoder LSTM, conformal calibration, multi-window LEAR-QRA, and
-  two- and three-model Quantile Regression Averaging combinations.
-version: "1.0.0"
-doi: "10.5281/zenodo.22836687"
-date-released: "2026-09-18"
+  two- and three-model Quantile Regression Averaging combinations, and the
+  analyses added in revision (bootstrap intervals, tail tests, threshold-weighted
+  CRPS, forecast-time regimes, feature-matched QRF, XGBoost comparator, quantile
+  crossing and conformal recalibration of the combination).
+version: "1.1.0"
+doi: "10.5281/zenodo.22836686"
+date-released: "2026-10-28"
 repository-code: "https://github.com/ani-agrawal/gb-day-ahead-probabilistic-forecasting"
 license: MIT
 keywords:

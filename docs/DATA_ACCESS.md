@@ -7,18 +7,21 @@ not grant a right to redistribute any third-party source.
 
 ## Sources used
 
-| Provider | Inputs | URL | Final retrieval/access date recorded for the paper |
+| Provider | Inputs | URL | Files used for the paper retrieved by (BST) |
 |---|---|---|---|
-| Elexon BMRS | Balancing prices, generation outturns and REMIT records | <https://bmrs.elexon.co.uk/api-documentation/introduction> | 9 August 2026 |
-| NESO Data Portal | Demand, transmission-wind and embedded-renewable forecasts; interconnector outturns | <https://www.neso.energy/data-portal> | 9 August 2026 |
-| NESO Data Portal | Daily Operational Planning Margin Requirement vintages | <https://www.neso.energy/data-portal/daily-opmr> | 9 August 2026 |
-| Investing.com | UK natural-gas futures proxy | <https://uk.investing.com/commodities/natural-gas-historical-data?cid=1057002> | 24 July 2026 |
-| Investing.com | UK emissions-allowance futures proxy | <https://uk.investing.com/commodities/uk-emissions-allowances-energy-c1-futures-historical-data> | 24 July 2026 |
+| Elexon BMRS | National-demand, transmission-system-demand and wind forecast vintages | <https://bmrs.elexon.co.uk/api-documentation/introduction> | 24 July 2026, 23:17 |
+| Elexon BMRS | Balancing prices and generation outturns | <https://bmrs.elexon.co.uk/api-documentation/introduction> | 24 July 2026, 23:37 |
+| Elexon BMRS | REMIT event list | <https://bmrs.elexon.co.uk/api-documentation/introduction> | 2 August 2026, 20:23 |
+| NESO Data Portal | Day-ahead demand, transmission-wind and embedded-renewable forecasts; interconnector outturns | <https://www.neso.energy/data-portal> | 24 July 2026, 23:37 |
+| NESO Data Portal | Daily Operational Planning Margin Requirement vintages | <https://www.neso.energy/data-portal/daily-opmr> | 2 July 2026, 23:15 |
+| Investing.com | UK natural-gas futures proxy | <https://uk.investing.com/commodities/natural-gas-historical-data?cid=1057002> | 24 July 2026, 22:48 |
+| Investing.com | UK emissions-allowance futures proxy | <https://uk.investing.com/commodities/uk-emissions-allowances-energy-c1-futures-historical-data> | 24 July 2026, 22:53 |
 | EPEX SPOT | Hourly GB day-ahead clearing price target | Licensed; not redistributed | Not a public-source retrieval |
 
-The dates above are access dates, not claims that providers never revised their
-data afterwards. Exact numerical reproduction therefore uses a lawfully held
-frozen snapshot. Fresh downloads may differ due to provider corrections.
+The times above are the latest times at which the source files used for the
+paper were retrieved, not claims that providers never revised their data
+afterwards. Exact numerical reproduction therefore uses a lawfully held frozen
+snapshot. Fresh downloads may differ due to provider corrections.
 
 ## Expected local layout
 

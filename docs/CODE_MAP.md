@@ -44,3 +44,11 @@ only the eleven levels common to every paper model.
 `modelling/lear/run_lear.py` contains the scaler, DST and input routines shared
 by the multi-window implementation. The optional cross-check in
 `modelling/lear/tests/` verifies those routines against epftoolbox.
+
+## Revision analyses
+
+`revision/` contains the analyses added in revision. They read the saved forecasts of
+the stages above and refit models only for the feature-matched QRF, the XGBoost
+comparator, and the reruns that recover quantiles before rearrangement and the QRA
+forecasts used to calibrate conformal recalibration of the combination. Run order and
+the paper item each script produces are listed in `revision/README.md`.
